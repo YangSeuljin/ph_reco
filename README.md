@@ -19,7 +19,7 @@
   7. 추출한 약국 데이터는 길안내 URL 및 로드뷰 URL로 제공한다.
 
 
--Tech Stack
+- Tech Stack
  - JDK11
  - Spring Boot 2.6.7
  - Spring Data JPA
@@ -34,7 +34,7 @@
  - Spock
  - Testcontainers
 
--Feature List
+- Feature List
  - Spring Data JPA를 이용한 CRUD 메서드 구현
  - Spock를 이용한 테스트 코드 작성
  - Testcontainers를 이용하여 독립 테스트 환경 구축
