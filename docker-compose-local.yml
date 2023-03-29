@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  ph-reco-redis:
+    container_name: ph-reco-redis
+    build:
+      dockerfile: Dockerfile
+      context: ./redis
+    image: yangsj1209/ph-reco-redis
+    ports:
+      - "6379:6379"
+  ph-reco-database:
+    container_name: ph-reco-database
+    build:
+      dockerfile: Dockerfile
+      context: ./database
+    image: yangsj1209/ph-reco-database
+    environment:
+      - MARIADB_DATABASE=ph-reco
+      - MARIADB_ROOT_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+    volumes:
+      - ./database/config:/etc/mysql/conf.d
+    ports:
+      - "3307:3306"
