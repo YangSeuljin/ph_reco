@@ -19,7 +19,7 @@ import java.net.URI;
 public class KakaoAddressSearchService {
 
     private final RestTemplate restTemplate;
-    private final KakaoBuilderService kakaoBuilderService;
+    private final KakaoUriBuilderService kakaoUriBuilderService;
 
     @Value("{kakao.rest.api.key}")
     private String kakaoRestApiKey;
@@ -28,7 +28,7 @@ public class KakaoAddressSearchService {
 
         if (ObjectUtils.isEmpty(address)) return null;
 
-        URI uri = kakaoBuilderService.buildUriByAddressSearch(address);
+        URI uri = kakaoUriBuilderService.buildUriByAddressSearch(address);
 
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.AUTHORIZATION, "KakaoAK " + kakaoRestApiKey);
