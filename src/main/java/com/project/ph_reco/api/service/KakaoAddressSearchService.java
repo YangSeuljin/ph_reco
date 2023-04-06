@@ -1,6 +1,6 @@
-package com.project.api.service;
+package com.project.ph_reco.api.service;
 
-import com.project.api.dto.KakaoApiResponseDto;
+import com.project.ph_reco.api.dto.KakaoApiResponseDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

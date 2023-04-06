@@ -1,4 +1,4 @@
-package com.project.api.service;
+package com.project.ph_reco.api.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
