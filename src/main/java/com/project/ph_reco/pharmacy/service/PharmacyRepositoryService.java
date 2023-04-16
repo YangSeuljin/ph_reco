@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Objects;
 
 @Slf4j
@@ -37,5 +38,10 @@ public class PharmacyRepositoryService {
         }
 
         entity.changePharmacyAddress(address);
+    }
+
+    @Transactional
+    public List<Pharmacy> findAll() {
+        return pharmacyRepository.findAll();
     }
 }
