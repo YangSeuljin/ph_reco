@@ -1,4 +1,4 @@
-package com.project.ph_reco.direction.Repository;
+package com.project.ph_reco.direction.repository;
 
 import com.project.ph_reco.direction.entity.Direction;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -2,7 +2,7 @@ package com.project.ph_reco.direction.service;
 
 import com.project.ph_reco.api.dto.DocumentDto;
 import com.project.ph_reco.api.service.KakaoCategorySearchService;
-import com.project.ph_reco.direction.Repository.DirectionRepository;
+import com.project.ph_reco.direction.repository.DirectionRepository;
 import com.project.ph_reco.direction.entity.Direction;
 import com.project.ph_reco.pharmacy.service.PharmacySearchService;
 import lombok.RequiredArgsConstructor;
