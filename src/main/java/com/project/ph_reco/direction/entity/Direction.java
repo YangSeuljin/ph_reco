@@ -21,10 +21,12 @@ public class Direction extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    //고객
     private String inputAddress;
     private double inputLatitude;
     private double inputLongitude;
 
+    //약국
     private String targetPharmacyName;
     private String targetAddress;
     private double targetLatitude;
