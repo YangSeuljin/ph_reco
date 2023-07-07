@@ -1,5 +1,6 @@
 package com.project.ph_reco.pharmacy.service;
 
+import com.project.ph_reco.pharmacy.cache.PharmacyRedisTemplateService;
 import com.project.ph_reco.pharmacy.dto.PharmacyDto;
 import com.project.ph_reco.pharmacy.entity.Pharmacy;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +17,15 @@ public class PharmacySearchService {
 
     private final PharmacyRepositoryService pharmacyRepositoryService;
 
+    private final PharmacyRedisTemplateService pharmacyRedisTemplateService;
+
     public List<PharmacyDto> searchPharmacyDtoList() {
+
+        //redis
+        List<PharmacyDto> pharmacyDtoList = pharmacyRedisTemplateService.findAll();
+        if (pharmacyDtoList.isEmpty()) return pharmacyDtoList;
+
+        //db
         return pharmacyRepositoryService.findAll()
                 .stream()
                 .map(this::convertToPharmacyDto)
